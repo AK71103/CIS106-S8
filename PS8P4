@@ -1,0 +1,35 @@
+#PS8P4
+#Alexander kazantzis
+#2-22-26
+
+TotGrsPay=0 #Entry count starts at 0
+while True:
+    #Input
+    LstNme = input("Enter Employee's Last Name: ")
+    JobCde = (input("Enter Job Code: "))
+    HrsWrk = int(input("Enter Hours Worked: "))
+    #Processing
+    def PayRte(Jobcde): 
+       if JobCde == 'L':
+            return 25
+       elif JobCde == 'A':
+            return 30
+       elif JobCde == 'J':
+            return 50
+        
+    
+    GrsPay= (int(PayRte(JobCde)) * (HrsWrk))
+    
+    TotGrsPay+= (GrsPay)
+    
+    #Output
+    print("Employee Name: ", LstNme)
+    print("Gross Pay: ",GrsPay)
+    print("Total Gross Pay: ",TotGrsPay)
+    #Quit sequence
+    LstQst = input("Enter Quit to exit program or else start program again:")
+    
+    if LstQst == 'Quit':
+        break
+    else:
+        continue
