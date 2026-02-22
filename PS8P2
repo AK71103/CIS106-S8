@@ -1,0 +1,18 @@
+#PS8P2
+#Alexander kazantzis
+#2-22-26
+
+#Input
+LstNme =  input("Enter player's last name: ")
+HitNum = float(input(" number of Hits: "))
+AtBats = float(input("Enter number of At Bats: ")) 
+
+#Process
+def BatAvg(x,y):
+    if AtBats == 0:
+        return "error, division by 0"
+    return (x/y)
+
+#Output
+print("Player's name", LstNme)
+print(f"Batting Average = {BatAvg(HitNum,AtBats)}")
