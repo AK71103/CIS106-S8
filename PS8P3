@@ -1,0 +1,29 @@
+#PS8P3
+#Alexander kazantzis
+#2-22-26
+
+EntCnt=0 #Entry count starts at 0
+while True:
+    #Input 
+    DstCty = input("Enter Destination City: ") 
+    MilTrv = float(input("Enter Miles Travelled: "))
+    Gallons = float(input("Enter Gallons Used: "))
+    #Processing
+    def MilPrGal(x,y): #Miles Per Gallon
+       if y == 0:
+           return "error, division by 0"
+       return (x/y)
+
+    EntCnt+=1
+    #Output
+    print("Enter Destination City: ", DstCty)
+    print("Miles Travelled: ",MilTrv)
+    print("Miles Per Gallon",MilPrGal(MilTrv,Gallons))
+    print("Number if Entries",EntCnt)
+    #Quit sequence
+    LstQst = input("Enter Quit to exit program or else start program again:")
+    
+    if LstQst == 'Quit':
+        break
+    else:
+        continue
