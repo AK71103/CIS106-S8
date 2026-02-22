@@ -1,0 +1,32 @@
+#PS8P1
+#Alexander kazantzis
+#2-22-26
+
+TotPri=0 #Total Price
+while True:
+    #Input
+    ItmQty = int(input("Enter Quantity: "))
+    ItmPri = int(input("Enter Price: "))
+    
+    #Processing
+    def ExtPri(x,y): 
+       if y == 0:
+           return "error, division by 0"
+       return (x*y)
+
+    if ExtPri(ItmQty,ItmPri) > 10000:
+        TotPri += ExtPri(ItmQty,ItmPri)-(ExtPri(ItmQty,ItmPri)*(.10))
+    else:
+        TotPri += ExtPri(ItmQty,ItmPri)
+    #Output
+    print("Item Quantity: ", ItmQty)
+    print("Item Price: $",ItmPri)
+    print("Extended Price: $",ExtPri(ItmQty,ItmPri))
+    print("TotalPrice: $",TotPri)
+    #Quit sequence
+    LstQst = input("Enter Quit to exit program or else start program again:")
+    
+    if LstQst == 'Quit':
+        break
+    else:
+        continue
