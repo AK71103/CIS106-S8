@@ -1,0 +1,34 @@
+#PS8P5
+#Alexander kazantzis
+#2-22-26
+
+TuitTot=0 #Total Tuitiom starts at 0
+while True:
+    #Input
+    LstNme = input("Enter Employee's Last Name: ")
+    CrdHrs = int(input("Enter Credit Hours: "))
+    DstCde = (input("Enter Distrct code (I/O): "))
+    #Processing
+    def PrCrdHr(DstCde): 
+        if DstCde == 'I':
+            return 250
+        elif DstCde == 'O':
+            return 550
+        else:
+            return "Enter either I or O"
+     
+    TuitDue= (int(PrCrdHr(DstCde)) * (CrdHrs))
+    
+    TuitTot+= (TuitDue)
+    
+    #Output
+    print("Employee Name: ", LstNme)
+    print("Tuition Due: ",TuitDue)
+    print("Total Tuition: ",TuitTot)
+    #Quit sequence
+    LstQst = input("Enter Quit to exit program or else start program again:")
+    
+    if LstQst == 'Quit':
+        break
+    else:
+        continue
